@@ -1,7 +1,9 @@
 Project Overview.
+
 This project focuses on predicting diseases using machine learning models, including kidney disease, liver disease, and Parkinson's disease. The goal is to analyze patient data, preprocess it, and train models for accurate classification.
 
 Data Preprocessing.
+
 Handling Missing Values: Imputed using mean/median/mode based on model requirements.
 Exploratory Data Analysis (EDA): Conducted statistical analysis, visualizations, and feature distributions.
 Multicollinearity Check: Used Correlation Coefficient (CRR) to detect and remove highly correlated features. 
@@ -10,12 +12,14 @@ Encoding Categorical Data: Used binary encoding, label encoding, and one-hot enc
 Handling Imbalanced Data: Used SMOTE (Synthetic Minority Over-sampling Technique) for balancing classes.
 
 Machine Learning Models.
+
 Logistic Regression,
 Decision Tree Classifier,
 Random Forest Classifier,
 Support Vector Machine (SVM).
 
 Model Evaluation.
+
 Performance metrics used:
     Accuracy,
     Precision,
