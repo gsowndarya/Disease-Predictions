@@ -25,7 +25,7 @@ Performance metrics used:
     Precision,
     Recall,
     F1-Score,
-    ROC-AUC Score,
+    ROC-AUC Score.
     
 Cross-validation applied to ensure model generalization.
 
