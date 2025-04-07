@@ -36,12 +36,12 @@ def get_user_input(disease):
         inputs['ane'] = 1 if st.selectbox("Anemia", ["Yes", "No"]) == "Yes" else 0
 
         inputs['bgr'] = st.number_input("Blood Glucose Random", min_value=50, max_value=500, value=100)
-        inputs['bu'] = st.number_input("Blood Urea", min_value=0, max_value=300, value=50)
-        inputs['sc'] = st.number_input("Serum Creatinine", min_value=0.0, max_value=15.0, value=1.2)
+        inputs['bu'] = st.number_input("Blood Urea", min_value=0, max_value=400, value=50)
+        inputs['sc'] = st.number_input("Serum Creatinine", min_value=0.0, max_value=18.1, value=1.2)
         inputs['sod'] = st.number_input("Sodium", min_value=100, max_value=200, value=140)
         inputs['pot'] = st.number_input("Potassium", min_value=2.0, max_value=10.0, value=4.5)
         inputs['hemo'] = st.number_input("Hemoglobin", min_value=5.0, max_value=20.0, value=13.5)
-        inputs['wc'] = st.number_input("White Blood Cell Count", min_value=2000, max_value=20000, value=8000)
+        inputs['wc'] = st.number_input("White Blood Cell Count", min_value=2000, max_value=27000, value=8000)
         inputs['rc'] = st.number_input("Red Blood Cell Count", min_value=2.0, max_value=8.0, value=5.0)
 
         return np.array([[inputs['age'], inputs['bp'], inputs['sg'], inputs['al'], inputs['sc'],inputs['rbc'], 
@@ -56,7 +56,7 @@ def get_user_input(disease):
         # Encoding categorical 'gender'
         inputs['gender'] = 1 if st.selectbox("Gender", ["Male", "Female"]) == "Male" else 0
         inputs['total_bilirubin'] = st.number_input("Total Bilirubin", min_value=0.0, max_value=50.0, value=1.0)
-        inputs['alkaline_phosphotase'] = st.number_input("Alkaline Phosphotase", min_value=0, max_value=2000, value=100)
+        inputs['alkaline_phosphotase'] = st.number_input("Alkaline Phosphotase", min_value=0, max_value=2200, value=100)
         inputs['alamine_aminotransferase'] = st.number_input("Alamine Aminotransferase", min_value=0, max_value=2000, value=50)
         inputs['albumin'] = st.number_input("Albumin", min_value=1.0, max_value=6.0, value=4.0)
         inputs['albumin_and_globulin_ratio'] = st.number_input("Albumin and Globulin Ratio", min_value=0.1, max_value=3.0, value=1.0, step=0.1)
@@ -67,8 +67,8 @@ def get_user_input(disease):
     elif disease == "Parkinson's Disease":
         st.subheader("🧠 Enter Parkinson's Disease Features:")
         inputs['mdvp_fo'] = st.number_input("MDVP:Fo(Hz)", min_value=50.0, max_value=300.0, value=150.0)
-        inputs['mdvp_fhi'] = st.number_input("MDVP:Fhi(Hz)", min_value=50.0, max_value=500.0, value=200.0)
-        inputs['mdvp_flo'] = st.number_input("MDVP:Flo(Hz)", min_value=50.0, max_value=200.0, value=100.0)
+        inputs['mdvp_fhi'] = st.number_input("MDVP:Fhi(Hz)", min_value=50.0, max_value=600.0, value=200.0)
+        inputs['mdvp_flo'] = st.number_input("MDVP:Flo(Hz)", min_value=50.0, max_value=240.0, value=100.0)
         inputs['mdvp_jitter'] = st.number_input("MDVP:Jitter(%)", min_value=0.0, max_value=1.0, value=0.01, step=0.01)
         inputs['mdvp_shimmer'] = st.number_input("MDVP:Shimmer", min_value=0.0, max_value=1.0, value=0.02, step=0.01)
         inputs['hnr'] = st.number_input("HNR", min_value=0.0, max_value=40.0, value=20.0)
@@ -76,7 +76,7 @@ def get_user_input(disease):
         inputs['dfa'] = st.number_input("DFA", min_value=0.0, max_value=2.0, value=0.7)
         inputs['spread1'] = st.number_input("Spread1", min_value=-10.0, max_value=10.0, value=-4.0)
         inputs['spread2'] = st.number_input("Spread2", min_value=0.0, max_value=1.0, value=0.2)
-        inputs['d2'] = st.number_input("D2", min_value=0.0, max_value=3.0, value=2.0)
+        inputs['d2'] = st.number_input("D2", min_value=0.0, max_value=4.0, value=2.0)
 
         return np.array([[inputs['mdvp_fo'], inputs['mdvp_fhi'], inputs['mdvp_flo'], inputs['mdvp_jitter'], 
                           inputs['mdvp_shimmer'], inputs['hnr'], inputs['rpde'], inputs['dfa'], inputs['spread1'], 
