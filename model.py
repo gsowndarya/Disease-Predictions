@@ -31,7 +31,7 @@ def get_user_input(disease):
         inputs['htn'] = 1 if st.selectbox("Hypertension", ["Yes", "No"]) == "Yes" else 0
         inputs['dm'] = 1 if st.selectbox("Diabetes Mellitus", ["Yes", "No"]) == "Yes" else 0
         inputs['cad'] = 1 if st.selectbox("Coronary Artery Disease", ["Yes", "No"]) == "Yes" else 0
-        inputs['appet'] = 1 if st.selectbox("Appetite", ["Good", "Poor"]) == "Good" else 0
+        inputs['appet'] = 1 if st.selectbox("Appetite", ["Good", "Poor"]) == "Poor" else 0
         inputs['pe'] = 1 if st.selectbox("Pedal Edema", ["Yes", "No"]) == "Yes" else 0
         inputs['ane'] = 1 if st.selectbox("Anemia", ["Yes", "No"]) == "Yes" else 0
 
